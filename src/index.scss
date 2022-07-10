@@ -3,3 +3,21 @@ $body-color: red;
 body {
     color: $body-color;
 }
+
+span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    color: #000;
+}
+
+// .hero-image {
+//     background: url('./images/outside.jpg');
+//     height: 250px;
+//     width: auto;
+// }
+
+footer {
+    font-size: small;
+}
