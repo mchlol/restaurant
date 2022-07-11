@@ -2,15 +2,18 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-//   mode: 'development',
+  mode: 'development',
   entry: {
       index: './src/index.js',
       home: './src/home.js',
+      nav: './src/nav.js',
+      footer: './src/footer.js',
   },
+  devtool: 'inline-source-map',
   plugins: [
-      new HtmlWebpackPlugin({
-          title: 'Restaurant',
-      }),
+    new HtmlWebpackPlugin({
+      title: 'Cordiale',
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
