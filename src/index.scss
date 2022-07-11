@@ -14,11 +14,11 @@ a {
 }
 
 .hero-image {
-    background-image: url('./outside.jpg');
-    background-size: contain;
+    background: url('./images/outside.jpg');
     background-repeat: no-repeat;
-    width: 250px;
-    height: auto;
+    background-size: contain;
+    height: 300px;
+    width: auto;
 }
 
 footer {

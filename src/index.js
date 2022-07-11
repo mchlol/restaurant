@@ -2,7 +2,7 @@ import "./index.scss";
 import nav from './nav';
 import footer from './footer';
 import headerComponent from './home';
-import Image from './small-foccacia.jpg';
+import Image from './images/small-foccacia.jpg';
 
 console.log('it works');
 function loadContent() {
