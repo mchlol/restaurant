@@ -1,11 +1,10 @@
 /* use a reset */
 
 :root {
-    --charcoal: #274156;
-    --polished-pine: #539987;
-    --mountbatten-pink: #916c80;
-    --seal-brown: #6b2b06;
-    --baby-powder: #fffff9;
+    --red: #6f1d1b;
+    --brown: #432818;
+    --brown-light: #99582a;
+    --white: #fffff9;
 }
 
 * {
@@ -17,7 +16,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--baby-powder);
+    background-color: var(--white);
 }
 
 a {
@@ -25,26 +24,44 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
     opacity: 0.8;
     text-decoration: underline;
     text-decoration-style: wavy;
     text-underline-offset: 0.2em;
+    text-decoration-color: var(--brown-light);
 }
 
 h1 {
     font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
+    color: var(--red);
 }
+
+
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 52,
+}
+
 
 /* reusable components */
 
 .grid-3rows {
+    height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
-.height-100percent {
-    height: 100%;
+.content-wrap {
+    position: relative;
+}
+
+.container {
+    width: 80%;
 }
 
 .padding-2em {
@@ -56,39 +73,12 @@ h1 {
     flex-direction: column;
 }
 
-/* left */
-
-.home-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2em;
-}
-
-.home-left>* {
-    margin: 1em 0;
-}
-
-/* right */
-
-.home-right {
-    display: flex;
-    place-content: center;
-    place-items: center;
-    background-color: #000;
-}
-
-.hero-img {
-    width: 100%;
-    height: auto;
-}
-
 /* nav styles */
 
 nav {
     height: 50px;
     overflow: hidden;
-    background-color: var(--seal-brown);
+    background-color: var(--red);
 }
 
 nav>ul {
@@ -100,22 +90,72 @@ nav>ul {
     height: 100%;
 }
 
-nav>ul>li {
+nav>ul>a>li {
     padding: 1em;
     margin-right: 0.5em;
-    color: var(--baby-powder);
+    color: var(--white);
+}
+
+nav>ul>a>:hover {
+    background-color: var(--brown);
+}
+
+/* HOME STYLES */
+
+/* left */
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    margin-left: 2em;
+    position: relative;
+}
+
+.home-left>* {
+    margin: 0.5em 0;
+}
+
+.text-circle {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+/* right */
+
+.home-right {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    border-top: 2px dotted var(--brown-light);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 0.25em 0;
 }
 
 /* footer  */
 
 footer {
-    height: 50px;
+    padding-top: .5em;
     font-size: small;
     text-align: center;
 }
 
 footer>a {
-    color: var(--seal-brown);
+    color: var(--brown-light);
 }
 
 
@@ -128,4 +168,94 @@ footer>a {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .text-circle {
+        z-index: 2;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+/* goofin around with circle text */
+
+svg {
+    fill: var(--brown-light);
+    height: auto;
+    max-width: 40vmin;
+    transform-origin: center;
+    width: 25%;
+}
+
+.animate-circle {
+    -webkit-animation-name: rotate;
+    -moz-animation-name: rotate;
+    -ms-animation-name: rotate;
+    -o-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -ms-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0);
+    }
+}
+
+@-moz-keyframes rotate {
+    from {
+        -moz-transform: rotate(360deg);
+    }
+
+    to {
+        -moz-transform: rotate(0);
+    }
+}
+
+@-ms-keyframes rotate {
+    from {
+        -ms-transform: rotate(360deg);
+    }
+
+    to {
+        -ms-transform: rotate(0);
+    }
+}
+
+@-o-keyframes rotate {
+    from {
+        -o-transform: rotate(360deg);
+    }
+
+    to {
+        -o-transform: rotate(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
 }

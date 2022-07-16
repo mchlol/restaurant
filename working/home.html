@@ -7,28 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
     <div class="grid-3rows">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Contact</a></li>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Menu</li>
+                </a>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
             </ul>
         </nav>
 
-        <div class="height-100percent">
+        <div>
             <div class="content-wrap">
-                <div class="flex-col home-left">
-                    <h1>Cordiale</h1>
-                    <p><code><em>cordiale</em> (Italian): warm, hearty, warm-hearted</code></p>
-                    <p>Welcome to Cordiale, a cosy, intimate <em>cucina</em> serving delicious, heart-warming Italian
+                <div class="flex-col container home-left">
+                    <h1>Cordiale
+                        <span class="material-symbols-rounded">
+                            local_pizza
+                        </span>
+                        <span class="material-symbols-rounded">
+                            local_cafe
+                        </span>
+                        <span class="material-symbols-rounded">
+                            dinner_dining
+                        </span>
+                    </h1>
+                    <p><code><em>cordiale</em> (Italian): warm, welcoming, genial</code></p>
+                    <hr>
+                    <p>Welcome to Cordiale, a cosy, intimate <em>cucina</em> serving delicious,
+                        heart-warming Italian
                         food.
                     </p>
+                    <svg class="animate-circle text-circle" viewBox="0 0 100 100" width="100" height="100">
+                        <defs>
+                            <path id="circle" d="
+                              M 50, 50
+                              m -37, 0
+                              a 37,37 0 1,1 74,0
+                              a 37,37 0 1,1 -74,0" />
+                        </defs>
+                        <text font-size="17">
+                            <textPath xlink:href="#circle">
+                                just like nonna used to make
+                            </textPath>
+                        </text>
+                    </svg>
                 </div>
                 <div class="home-right">
+                    <hr>
                     <div class="image">
                         <img class="hero-img" src="../src/images/outside.jpg"
                             alt="a busy restaurant outdoors lit up at night">
@@ -42,7 +77,7 @@
         <footer>Coded by <a href="https://github.com/mchlol" target="_blank">mchlol</a>. Photo by <a
                 href="https://unsplash.com/@twistsandzests?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Quin
                 Engle</a> on <a
-                href="https://unsplash.com/collections/SSLmP1SuByo/italian-restaurant/cdbd6a9468565477237dd55fa6de7047?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                href="https://unsplash.com/collections/SSLmP1SuByo/italian-restaurant/cdbd6a9468565477237dd55fa6de7047?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
         </footer>
     </div>
 </body>
