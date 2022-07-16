@@ -1,8 +1,11 @@
-$body-color: red;
-$image-bg-color: #eee;
+$charcoal: #274156;
+$polished-pine: #539987;
+$mountbatten-pink: #916c80;
+$seal-brown: #6b2b06;
+$baby-powder: #fffff9;
 
 body {
-    color: $body-color;
+    color: $seal-brown;
 }
 
 span {
@@ -10,7 +13,7 @@ span {
 }
 
 a {
-    color: #000;
+    color: $polished-pine;
 }
 
 .hero-image {
