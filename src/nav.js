@@ -1,5 +1,6 @@
 function nav() {
     const nav = document.createElement('nav');
+    
     nav.innerHTML = 
         `<ul>
             <li>Home</li>

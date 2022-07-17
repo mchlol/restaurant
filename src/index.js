@@ -1,10 +1,13 @@
 import "./index.scss";
 import nav from './nav';
-import footer from './footer';
 import headerComponent from './home';
 import Image from './images/small-foccacia.jpg';
+import footer from './footer';
 
-console.log('it works');
+// load the nav content
+// load the home content
+// load the footer content
+
 function loadContent() {
 
     const contentWrap = document.createElement('div');
