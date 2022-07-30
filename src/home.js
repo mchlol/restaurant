@@ -1,20 +1,58 @@
-function headerComponent() {
-  const header = document.createElement('header');
-  const h1 = document.createElement('h1');
-  const introSpan = document.createElement('span');
-  const aboutPara = document.createElement('p');
+function homeContent() {
+  const contentWrap = document.createElement('div');
+  contentWrap.classList.add('content-wrap');
 
-  h1.textContent = 'Cordiale';
-  introSpan.textContent = 'cordiale (Italian): warm, hearty, warm-hearted';
-  aboutPara.innerHTML = `A cosy, intimate <em>cucina</em> serving delicious, heart-warming Italian food.`;
+  const headerWrap = document.createElement('div');
+  headerWrap.classList.add('flex-col','container','home-left');
+  headerWrap.innerHTML = `
+  <h1>Cordiale</h1>
 
-  header.appendChild(h1);
-  header.appendChild(introSpan);
-  header.appendChild(aboutPara);
-  console.log('header loaded');
+                    <p><code><em>cordiale (Italian)</em>: warm, welcoming, genial</code></p>
+                    <hr>
+                    <h2><span class="material-symbols-rounded">
+                            local_pizza
+                        </span>
+                        <span class="material-symbols-rounded">
+                            local_cafe
+                        </span>
+                        <span class="material-symbols-rounded">
+                            dinner_dining
+                        </span>
+                    </h2>
+                    <p>Welcome to Cordiale, a cosy, intimate <em>cucina</em> serving delicious,
+                        heart-warming Italian
+                        food.
+                    </p>
+                    <svg class="animate-circle text-circle" viewBox="0 0 100 100" width="100" height="100">
+                        <defs>
+                            <path id="circle" d="
+                              M 50, 50
+                              m -37, 0
+                              a 37,37 0 1,1 74,0
+                              a 37,37 0 1,1 -74,0" />
+                        </defs>
+                        <text font-size="17">
+                            <textPath xlink:href="#circle">
+                                just like nonna used to make
+                            </textPath>
+                        </text>
+                    </svg>
+  `
+  contentWrap.appendChild(headerWrap);
 
-  return header;
+  const homeRight = document.createElement('div');
+  homeRight.classList.add('home-right');
+  const hr = document.createElement('hr');
+  const homeImageWrap = document.createElement('div');
+  // image here
+
+  homeRight.appendChild(hr);
+  homeRight.appendChild(homeImageWrap);
+
+  contentWrap.appendChild(homeRight);
+
+  return contentWrap;
 }
 
 
-export default headerComponent;
+export default homeContent;

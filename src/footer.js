@@ -2,7 +2,9 @@ function footer() {
     const footer = document.createElement('footer');
     footer.innerHTML = 
         `
-        Photo by <a href="https://unsplash.com/@twistsandzests?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Quin Engle</a> on <a href="https://unsplash.com/collections/SSLmP1SuByo/italian-restaurant/cdbd6a9468565477237dd55fa6de7047?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        <p>Coded by <a href="https://github.com/mchlol" target="_blank">mchlol</a>. All photos in <a
+                    href="https://unsplash.com/collections/SSLmP1SuByo/italian-restaurant" target="_blank">this Unsplash
+                    collection</a>.</p>
   `;
     return footer;
 };

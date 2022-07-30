@@ -1,39 +1,30 @@
 import "./index.scss";
 import nav from './nav';
-import headerComponent from './home';
-import Image from './images/small-foccacia.jpg';
+import homeContent from './home';
 import footer from './footer';
 
 // load the nav content
 // load the home content
 // load the footer content
 
-function loadContent() {
+function loadHomeContent() {
 
-    const contentWrap = document.createElement('div');
+    const layout = document.createElement('div');
+    layout.classList.add('grid-3rows');
+
     const getNav = nav();
+    const getHomeContent = homeContent();
     const getFooter = footer();
-
-    const main = document.createElement('main');
-
-    const header = headerComponent();
-
-    const imageWrap = document.createElement('div');
-    imageWrap.classList.add('hero-image');
-
-    const myImage = document.createElement('image');
-    myImage.src = Image;
     
-    contentWrap.appendChild(getNav);
-    contentWrap.appendChild(main);
-    main.appendChild(header);
-    main.appendChild(myImage);
-    main.appendChild(imageWrap);
-    contentWrap.appendChild(getFooter);
+    layout.appendChild(getNav);
+    layout.appendChild(getHomeContent);
+    layout.appendChild(getFooter);
+
+    layout.appendChild(getFooter);
   
     console.log('content loaded');
 
-    return document.body.appendChild(contentWrap);
+    return document.body.appendChild(layout);
 }
 
-loadContent();
+loadHomeContent();
