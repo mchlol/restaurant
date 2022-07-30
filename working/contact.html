@@ -30,23 +30,56 @@
 
         <div>
             <div class="content-wrap">
-                <div class="container">
-                    <h1>Contact</h1>
 
-                    <ul>
-                        <li>Address</li>
-                        <li>Phone number</li>
-                        <li>Email address</li>
-                        <li>Good place for a form!</li>
-                    </ul>
+                <div class="flex-col container centered">
+                    <header class="contact-header">
+                        <h1>Contact</h1>
+                        <ul>
+                            <li><span class="contact-span">Address:</span> 123 Italy Street, Vagueville</li>
+                            <li>
+                                <contact class="span">Phone:</contact> 9999 0000
+                            </li>
+                            <li>
+                                <contact class="span">Email:</contact> ciao@cordialecucina.com
+                            </li>
+                        </ul>
+                    </header>
+
+                    <div class="form-wrap flex-col">
+                        <legend>
+                            <h2>Send a message</h2>
+                        </legend>
+                        <form action="#" class="contact-form">
+                            <label for="name">
+                                <span>Name:</span>
+                                <input type="text" name="name" id="name">
+                            </label>
+                            <label for="email">
+                                <span>Email:</span>
+                                <input type="email" name="email" id="email">
+                            </label>
+                            <label for="message">
+                                <span>Message:</span>
+                                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            </label>
+                            <input type="submit">
+                    </div>
+                    </form>
+                </div>
+
+                <div class="home-right container centered">
+                    <img class="contact-img" src="../src/images/picnic.jpg"
+                        alt="a picnic rug and basket with glasses of white wine" />
+
                 </div>
             </div>
         </div>
 
         <footer>Coded by <a href="https://github.com/mchlol" target="_blank">mchlol</a>. Photo by <a
-                href="https://unsplash.com/@twistsandzests?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Quin
-                Engle</a> on <a
-                href="https://unsplash.com/collections/SSLmP1SuByo/italian-restaurant/cdbd6a9468565477237dd55fa6de7047?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+                href="https://unsplash.com/@kate_gliz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kateryna
+                Hliznitsova</a> on <a
+                href="https://unsplash.com/collections/SSLmP1SuByo/italian-restaurant/cdbd6a9468565477237dd55fa6de7047?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            .
         </footer>
 
     </div>

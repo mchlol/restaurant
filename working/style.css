@@ -75,6 +75,14 @@ h1 {
     flex-direction: column;
 }
 
+.centered {
+    margin: 0 auto;
+}
+
+.align-center {
+    align-items: center;
+}
+
 /* nav styles */
 
 nav {
@@ -146,6 +154,77 @@ hr {
     border-left: none;
     border-right: none;
     padding: 0.25em 0;
+}
+
+/* ## MENU STYLES ## */
+
+.menu-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-img {
+    height: 250px;
+    width: auto;
+}
+
+/* ## CONTACT STYLES ## */
+
+.contact-header {
+    margin: 1em;
+    padding: 1em;
+}
+
+.contact-header>h1 {
+    padding-bottom: 1em;
+}
+
+.contact-header>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-img {
+    max-width: 80%;
+    height: auto;
+}
+
+.contact-form {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    padding: 0.25em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+input {
+    width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    font-size: 1.1rem;
+    padding: 0.25em;
+}
+
+textarea {
+    resize: none;
+    max-width: 100%;
+    font-family: inherit;
+}
+
+input[type=submit] {
+    border: none;
+    background-color: var(--yellow);
+    color: var(--brown);
+    border-radius: 4px;
+    padding: 0.5em;
+    font-size: 1.1rem;
 }
 
 /* footer  */
