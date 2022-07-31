@@ -1,13 +1,11 @@
 $material-symbols-font-path: '~material-symbols/';
 @import 'material-symbols/rounded.css';
 
-:root {
-    --red: #6f1d1b;
-    --brown: #432818;
-    --brown-light: #99582a;
-    --yellow: #FFC300;
-    --white: #fffff9;
-}
+$red: #6f1d1b;
+$brown: #432818;
+$brown-light: #99582a;
+$yellow: #FFC300;
+$white: #fffff9;
 
 /* reset */
 
@@ -39,7 +37,7 @@ $material-symbols-font-path: '~material-symbols/';
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--white);
+    background-color: $white;
 }
 
 a {
@@ -52,12 +50,12 @@ a:hover {
     text-decoration: underline;
     text-decoration-style: wavy;
     text-underline-offset: 0.2em;
-    text-decoration-color: var(--brown);
+    text-decoration-color: $brown;
 }
 
 h1 {
     font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
-    color: var(--red);
+    color: $red;
 }
 
 
@@ -108,26 +106,26 @@ h1 {
 nav {
     height: 50px;
     overflow: hidden;
-    background-color: var(--red);
-}
+    background-color: $red;
 
-nav>ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style-type: none;
-    text-transform: uppercase;
-    height: 100%;
-}
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+        text-transform: uppercase;
+        height: 100%;
 
-nav>ul>a>li {
-    padding: 1em;
-    margin-right: 0.5em;
-    color: var(--white);
-}
+        a>li {
+            padding: 1em;
+            margin-right: 0.5em;
+            color: $white;
+        }
 
-nav>ul>a>:hover {
-    background-color: var(--brown-light);
+        a>:hover {
+            background-color: $brown-light;
+        }
+    }
 }
 
 /* HOME STYLES */
@@ -141,10 +139,10 @@ nav>ul>a>:hover {
     padding: 2em;
     margin-left: 2em;
     position: relative;
-}
 
-.home-left>* {
-    margin: 0.5em 0;
+    * {
+        margin: 0.5em 0;
+    }
 }
 
 .text-circle {
@@ -169,7 +167,7 @@ nav>ul>a>:hover {
 }
 
 hr {
-    border-top: 2px dotted var(--brown-light);
+    border-top: 2px dotted $brown-light;
     border-bottom: none;
     border-left: none;
     border-right: none;
@@ -195,15 +193,15 @@ hr {
 .contact-header {
     margin: 1em;
     padding: 1em;
-}
 
-.contact-header>h1 {
-    padding-bottom: 1em;
-}
+    h1 {
+        padding-bottom: 1em;
+    }
 
-.contact-header>ul {
-    list-style-type: none;
-    padding: 0;
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
 }
 
 .contact-img {
@@ -212,13 +210,15 @@ hr {
 }
 
 .contact-span {
-    color: var(--brown-light);
+    color: $brown-light;
 }
 
 /* form styles */
 
-legend>h2 {
-    text-align: center;
+legend {
+    h2 {
+        text-align: center;
+    }
 }
 
 .contact-form {
@@ -250,7 +250,7 @@ textarea {
 
 input[type=submit] {
     border: none;
-    background-color: var(--yellow);
+    background-color: $yellow;
     color: var(--brown);
     border-radius: 4px;
     padding: 0.5em;
@@ -258,12 +258,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: var(--yellow);
+    background-color: $yellow;
     opacity: 0.85;
 }
 
 input[type=submit]:active {
-    background-color: var(--brown-light);
+    background-color: $brown-light;
 }
 
 /* footer  */
@@ -272,10 +272,10 @@ footer {
     padding: .5em 0;
     font-size: small;
     text-align: center;
-}
 
-footer>a {
-    color: var(--brown-light);
+    a {
+        color: $brown-light;
+    }
 }
 
 
@@ -304,7 +304,7 @@ footer>a {
 /* goofin around with circle text */
 
 svg {
-    fill: var(--yellow);
+    fill: $yellow;
     height: auto;
     max-width: 30vmin;
     transform-origin: center;
