@@ -1,10 +1,13 @@
+// material symbols installed
 $material-symbols-font-path: '~material-symbols/';
 @import 'material-symbols/rounded.css';
 
+// colour variables
 $red: #6f1d1b;
 $brown: #432818;
 $brown-light: #99582a;
 $yellow: #FFC300;
+$yellow-pale: #FDF6DC;
 $white: #fffff9;
 
 /* reset */
@@ -159,6 +162,11 @@ nav {
     flex-direction: column;
     place-content: center;
     place-items: center;
+    background-color: $white;
+    // opacity: 0.4;
+    background-image: repeating-linear-gradient(45deg, $yellow-pale 25%, transparent 25%, transparent 75%, $yellow-pale 75%, $yellow-pale), repeating-linear-gradient(45deg, $yellow-pale 25%, $white 25%, $white 75%, $yellow-pale 75%, $yellow-pale);
+    background-position: 0 0, 40px 40px;
+    background-size: 80px 80px;
 }
 
 .hero-img {
@@ -272,6 +280,7 @@ footer {
     padding: .5em 0;
     font-size: small;
     text-align: center;
+    margin-bottom: .5em;
 
     a {
         color: $brown-light;

@@ -1,3 +1,5 @@
+import Outside from './images/outside.jpg';
+
 function homeContent() {
   const contentWrap = document.createElement('div');
   contentWrap.classList.add('content-wrap');
@@ -48,7 +50,12 @@ function homeContent() {
 
   homeRight.appendChild(hr);
   homeRight.appendChild(homeImageWrap);
+  const heroImage = new Image();
+  heroImage.src = Outside;
+  heroImage.classList.add('hero-img');
 
+  homeImageWrap.appendChild(heroImage);
+  homeRight.appendChild(homeImageWrap);
   contentWrap.appendChild(homeRight);
 
   return contentWrap;
