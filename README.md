@@ -1,6 +1,6 @@
 # restaurant
 
-Live site (WIP)
+[Live site (WIP)](https://mchlol.github.io/restaurant/)
 
 A project for The Odin Project to practice using webpack.  
 [Link to project instructions](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)  
