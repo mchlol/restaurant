@@ -1,35 +1,29 @@
 function nav() {
     const nav = document.createElement('nav');
 
-    const navList = document.createElement('ul');
+    const navList = document.createElement('div');
+    navList.classList.add('nav-btn-wrap');
 
-    // CONVERT LI TO BUTTON
-    // on click, these buttons should remove the currently displayed content and load the relevant content
-    const homeLink = document.createElement('li');
-    homeLink.textContent = 'Home';
-    const menuLink = document.createElement('li');
-    menuLink.textContent = 'Menu';
-    const contactLink = document.createElement('li');
-    contactLink.textContent = 'Contact';
+    const homeBtn = document.createElement('button');
+    homeBtn.classList.add('nav-btn');
+    homeBtn.setAttribute('id','homeBtn');
+    homeBtn.textContent = 'Home';
+    const menuBtn = document.createElement('button');
+    menuBtn.classList.add('nav-btn');
+    menuBtn.setAttribute('id','menuBtn');
+    menuBtn.textContent = 'Menu';
+    const contactBtn = document.createElement('button');
+    contactBtn.classList.add('nav-btn');
+    contactBtn.setAttribute('id','contactBtn');
+    contactBtn.textContent = 'Contact';
 
-
-
-
-    nav.innerHTML = `
-    <ul>
-                <a href="./home.html">
-                    <li>Home</li>
-                </a>
-                <a href="./menu.html">
-                    <li>Menu</li>
-                </a>
-                <a href="./contact.html">
-                    <li>Contact</li>
-                </a>
-            </ul>
-    `;
+    navList.appendChild(homeBtn);
+    navList.appendChild(menuBtn);
+    navList.appendChild(contactBtn);
 
     nav.appendChild(navList);
+
+    
     return nav;
 };
 

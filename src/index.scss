@@ -112,26 +112,30 @@ nav {
     height: 50px;
     overflow: hidden;
     background-color: $red;
-
-    ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        list-style-type: none;
-        text-transform: uppercase;
-        height: 100%;
-
-        a>li {
-            padding: 1em;
-            margin-right: 0.5em;
-            color: $white;
-        }
-
-        a>:hover {
-            background-color: $brown-light;
-        }
-    }
 }
+
+.nav-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-btn {
+    border: none;
+    background-color: $red;
+    padding: 1em;
+    margin-right: 0.5em;
+    color: $white;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.nav-btn:hover {
+    background-color: $brown-light;
+}
+
 
 /* HOME STYLES */
 
