@@ -83,6 +83,10 @@ h1 {
     position: relative;
 }
 
+.homeWrap {
+    width: 100%;
+}
+
 .container {
     width: 80%;
 }
@@ -293,6 +297,17 @@ footer {
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+    }
+
+    .animate-circle {
+        display: none;
+    }
+}
 
 /* ## DESKTOP STYLES ## */
 
