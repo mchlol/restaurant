@@ -1,8 +1,9 @@
 import Outside from './images/outside.jpg';
 
 function homeContent() {
-  const contentWrap = document.createElement('div');
-  contentWrap.classList.add('content-wrap');
+    // this is now in the index.js
+  const homeWrap = document.createElement('div');
+  homeWrap.classList.add('home-wrap');
 
   const headerWrap = document.createElement('div');
   headerWrap.classList.add('flex-col','container','home-left');
@@ -40,7 +41,7 @@ function homeContent() {
                         </text>
                     </svg>
   `
-  contentWrap.appendChild(headerWrap);
+  homeWrap.appendChild(headerWrap);
 
   const homeRight = document.createElement('div');
   homeRight.classList.add('home-right');
@@ -56,9 +57,9 @@ function homeContent() {
 
   homeImageWrap.appendChild(heroImage);
   homeRight.appendChild(homeImageWrap);
-  contentWrap.appendChild(homeRight);
+  homeWrap.appendChild(homeRight);
 
-  return contentWrap;
+  return homeWrap;
 }
 
 
