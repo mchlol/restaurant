@@ -1,7 +1,7 @@
 import Outside from './images/outside.jpg';
 
 function homeContent() {
-    // this is now in the index.js
+    // this appends to the content-wrap div in index.js
   const homeWrap = document.createElement('div');
   homeWrap.classList.add('home-wrap');
 

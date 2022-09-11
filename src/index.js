@@ -5,6 +5,8 @@ import menuContent from "./menu";
 import contactContent from "./contact";
 import footer from './footer';
 
+// turn this into a module?
+
 const getNav = nav();
 const getHomeContent = homeContent();
 const getMenuContent = menuContent();
@@ -14,9 +16,9 @@ const getFooter = footer();
 const layout = document.createElement('div');
 layout.classList.add('grid-3rows');
 document.body.appendChild(layout);
+layout.appendChild(getNav);
 const contentWrap = document.createElement('div');
 contentWrap.classList.add('content-wrap');
-layout.appendChild(getNav);
 layout.appendChild(contentWrap);
 contentWrap.appendChild(getHomeContent);
 layout.appendChild(getFooter);
@@ -34,16 +36,15 @@ buttons.forEach(btn => {
 
 function loadContent(button) {
     contentWrap.innerHTML = '';
+    console.log(contentWrap);
 
     if (button === 'homeBtn') {
-        contentWrap.appendChild(getHome);
+        return contentWrap.appendChild(getHomeContent);
     } else if (button === 'menuBtn') {
-        contentWrap.appendChild(getMenu);
+        return contentWrap.appendChild(getMenuContent);
     } else if (button === 'contactBtn') {
-        contentWrap.appendChild(getContact);
+        return contentWrap.appendChild(getContactContent);
     } else {
-        console.log('uh oh');
+        return console.log('uh oh');
     }
-
-    return document.body.appendChild(contentWrap);
 };
