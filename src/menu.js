@@ -22,7 +22,7 @@ function menuContent() {
     menuWrap.appendChild(menuHeader);
 
     const menuItems = document.createElement('div');
-    menuItems.classList.add('container', 'menu-flex');
+    menuItems.classList.add('menu-container', 'menu-flex');
 
     const itemDetails = [
         {
