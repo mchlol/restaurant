@@ -12,7 +12,7 @@ function menuContent() {
     menuWrap.classList.add('menu-wrap', 'flex-col','align-center');
     
     const menuHeader = document.createElement('header');
-    menuHeader.classList.add('flex-col', 'home-left');
+    menuHeader.classList.add('flex-col', 'container', 'home-left');
     menuHeader.innerHTML = `
     <h1>Menu</h1>
 
@@ -22,9 +22,7 @@ function menuContent() {
     menuWrap.appendChild(menuHeader);
 
     const menuItems = document.createElement('div');
-    menuItems.classList.add('menu-flex');
-
-    // write a function that stores the image info as an array of objects then loops through them to display on the page
+    menuItems.classList.add('container', 'menu-flex');
 
     const itemDetails = [
         {
@@ -37,23 +35,57 @@ function menuContent() {
             source: Meatballs,
             altText: 'meatballs on a plate'
         },
-        
+        {
+            name: 'Bruschetta',
+            source: Bruschetta,
+            altText: 'toast with tomato toppings'
+        },
+        {
+            name: 'Charcuterie',
+            source: Charcuterie,
+            altText: 'platter of various delicious snacks'
+        },
+        {
+            name: 'Mussel pasta',
+            source: Mussel,
+            altText: 'pasta with mussels on a table with wine glasses'
+        },
+        {
+            name: 'Pizza',
+            source: Pizza,
+            altText: 'a cheesy slice being taken from a pizza'
+        },
+        {
+            name: 'Coffee',
+            source: Coffee,
+            altText: 'cups of coffee on a cafe table'
+        }
+
     ];
 
-    // but for now let's just get them on there
+    function displayMenu(array) {
+        array.forEach(element => {
+            let figure = document.createElement('figure');
+            figure.classList.add('menu-item');
 
-    const foccaciaFig = document.createElement('figure');
-    foccaciaFig.classList.add('menu-item');
-    const foccaciaImg = new Image();
-    foccaciaImg.src = Foccacia;
-    foccaciaImg.alt = 'foccacia with sliced lemon, rosemary sprigs, and salt on a wooden board';
-    foccaciaFig.appendChild(foccaciaImg);
-    const foccaciaFigCap = document.createElement('figcaption');
-    foccaciaFigCap.textContent = 'Foccacia';
-    foccaciaFig.appendChild(foccaciaFigCap);
+            let img = new Image();
+            img.src = element.source;
+            img.classList.add('menu-img');
+            img.alt = element.altText;
+            figure.appendChild(img);
 
-    menuItems.appendChild(foccaciaFig);
+            let caption = document.createElement('figcaption');
+            caption.textContent = element.name;
 
+            figure.appendChild(caption);
+
+            menuItems.appendChild(figure);
+
+            return console.log(element.name);
+        });
+    }
+
+    displayMenu(itemDetails);
     menuWrap.appendChild(menuItems);
 
     return menuWrap;
