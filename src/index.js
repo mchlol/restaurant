@@ -36,7 +36,6 @@ buttons.forEach(btn => {
 
 function loadContent(button) {
     contentWrap.innerHTML = '';
-    console.log(contentWrap);
 
     if (button === 'homeBtn') {
         return contentWrap.appendChild(getHomeContent);

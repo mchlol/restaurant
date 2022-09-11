@@ -83,8 +83,9 @@ h1 {
     position: relative;
 }
 
-.homeWrap,
-.menuWrap {
+.home-wrap,
+.menu-wrap,
+.contact-wrap {
     width: 100%;
 }
 
@@ -162,7 +163,7 @@ nav {
 .text-circle {
     z-index: 2;
     position: fixed;
-    top: 50px;
+    top: 45px;
     right: 0;
 }
 
@@ -315,7 +316,8 @@ footer {
 @media screen and (min-width: 840px) {
 
     .home-wrap,
-    .menuWrap {
+    .menu-wrap,
+    .contact-wrap {
         height: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -325,7 +327,7 @@ footer {
         z-index: 2;
         position: fixed;
         bottom: 0;
-        left: 0;
+        right: 0;
     }
 
     .contact-img-wrap {

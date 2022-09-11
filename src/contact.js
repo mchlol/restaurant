@@ -1,8 +1,8 @@
 import Picnic from './images/picnic.jpg';
 
 function contactContent() {
-    const menuWrap = document.createElement('div');
-    menuWrap.classList.add('content-wrap');
+    const contactWrap = document.createElement('div');
+    contactWrap.classList.add('contact-wrap');
 
     const containerDiv = document.createElement('div');
     containerDiv.classList.add('flex-col','container','centered','align-center');
@@ -53,9 +53,9 @@ function contactContent() {
 
     containerDiv.appendChild(header);
     containerDiv.appendChild(formWrap);
-    menuWrap.appendChild(containerDiv);
-    menuWrap.appendChild(contactRight);
-    return menuWrap;
+    contactWrap.appendChild(containerDiv);
+    contactWrap.appendChild(contactRight);
+    return contactWrap;
 
 }
 
